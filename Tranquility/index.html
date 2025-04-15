@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tranquility - Solo</title>
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+    <main>
+        <H1 id="title">
+            Tranquilty
+        </H1>
+        <div class="instructions">
+            <p>You will attempt to find your paradise island on the good ship Tranquility. To do this you will need to fill the entire 6x6 sea grid with Island cards and have played one Start and one Finish card. You win if you complete the grid, and have
+                placed a Start and Finish card, living out your days in an island paradise. You lose if a single player can no longer play or discard any cards causing the ship to be lost forever.
+            </p>
+            <p>You select an Island card from your hand and may play it anywhere in the grid providing you follow these rules: 1. Cards must be placed so that the grid ascends in numerical order from bottom-left to top-right, first moving along the bottom
+                row fro m left to right, followed by the second row moving left to right etc. 2. If the card is placed next to an existing card in the ascending sequence (even if they are on different rows) then you must discard the number of cards face
+                down from your hand equal to the difference between the numbers shown on the two cards e.g. placing a ‘5’ next to a ‘3’ will mean you must discard two cards.
+            </p>
+            <p>Finish Cards You may only play a Finish card once the rest of the grid (plus a Start card) has been completed. If this card is played before any player runs out of legal moves then you all win the game. Finish cards may be discarded using
+                the normal rules but beware: there are only five in the game! You cannot win without a Finish card being played.
+            </p>
+        </div>
+
+        <Div class="playArea">
+            <!-- 7x7 grid for the game board -->
+
+            <div class="board" id="gameboard">
+                <!-- The 7x7 grid of boxes will be generated here -->
+            </div>
+        </Div>
+
+        <div class="Hand" id="playerHand">
+            Player's hand will be rendered here
+        </div>
+        <div class="drawDiscard">
+            <button id="drawCardBtn">Draw Card</button>
+            <button id="discardBtn">Discard Card</button>
+            <div id="discardPile"></div>
+
+        </div>
+
+        <div id="discardPrompt" class="modal hidden">
+            <div class="modal-content">
+                <h3>Select cards to discard:</h3>
+                <div id="discardOptions"></div>
+                <button id="confirmDiscard" disabled>Confirm Discard</button>
+            </div>
+        </div>
+        <script src="tranquility.js"></script>
+    </main>
+</body>
+
+</html>
